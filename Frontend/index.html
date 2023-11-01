@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="cuerpo-buscador">
+
+        <div class="buscador">
+            <input class="buscar-input" id="buscar" type="text" placeholder="buscar">
+            <button onclick="buscar()" class="buscar-button">Buscar</button>
+        </div>
+        <ul id="results" class="results"></ul>
+    </div>
+        
+    <div class="cuerpo">
+        <h1>Registro De Estudiantes</h1>
+        <div class="formulario">
+            <form action="" method="">
+                <input class="estilo" type="text" name="primer-nombre" id=""  placeholder="Primer Nombre" required>
+                <input class="estilo" type="text" name="segundo-nombre" id="" placeholder="Segundo Nombre">
+                <input class="estilo" type="text" name="primer-apellido" id="" placeholder="Primer Apellido"  required>
+                <input class="estilo" type="text" name="segundo-apellido" id="" placeholder="Segundo Apellido">
+                <input class="estilo" type="number" name="identificacion" id="" placeholder="identificacion" required>
+                <input class="estilo" type="number" name="cod-estudiante" id="" placeholder="Codigo de Estudiante" required>
+                <input class="estilo" type="text" name="carrera" id="" placeholder="Escriba la carrera">
+
+                <h3>Fecha De Nacimiento</h3>
+
+                <input class="estilo" type="date" asp-format="{0:yyyy-MM-dd}" asp-for="FechaNac" required>
+
+                <h3>Seleccione una modalidad</h3>
+                
+                <select class="estilo" name="modalidades" id="">
+                    <option value="1">Practicas</option>
+                    <option value="2">Homologacion</option>
+                    <option value="3">Proyecto de investigacion</option>
+                    <option value="4">Pasantias</option>
+                    <option value="5">Contrato de aprendizaje</option>
+                </select>
+
+                <button type="submit" class="btn">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/buscador.js"></script>
+</body>
+</html>

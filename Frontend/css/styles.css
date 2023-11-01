@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 2s ease;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+body{
+    background: #ccc;
+}
+
+
+/*Este es el diseño del buscardor y sus estilos*/
+
+.buscador{
+    display: flex;
+}
+
+
+.cuerpo-buscador{
+    margin: auto;
+    margin-top: 15px;
+    width: 450px;
+    border-radius: 25px;
+    padding: 12px;
+    background: white;
+    box-shadow: 0 0 7px #222;
+}
+
+.buscar-input{
+    margin: auto;
+    margin-top: 25px;
+    width: 300px;
+    height: 50px;
+    border-radius: 23px;
+    padding: 18px;
+    border-color: #89aeff;
+    font-size: 18px;
+}
+
+.buscar-button{
+    margin: auto 0px 12.5px;
+    width: 100px;
+    height: 25px;
+    border-radius: 15px;
+    transition: .2s;
+    border: none;
+    background: #457efa;
+    cursor: pointer;
+}
+
+.buscar-button:hover{
+    background-color: rgb(153, 205, 252);
+}
+
+ul{
+    list-style: none;
+}
+
+/*Estilos del formulario*/
+.cuerpo{
+    width: 700px;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 75px;
+    box-shadow: 0 0 7px #222;
+    border-radius: 25px;
+    padding: 35px;
+    background-color: white;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.estilo{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    border-color: #89aeff;
+}
+
+
+.formulario button{
+    width: 100%;
+    border: none;
+    padding: 18px;
+    margin: 16px 0px;
+    background: #3b70e0;
+    transition: .4s;
+    color: white; 
+    border-radius: 15px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+
+.formulario button:hover{
+    background-color: rgb(153, 205, 252);
+}
+
+.formulario button:hover a{
+    color: black;
+}
+
+/*Aqui van los estilos de las etiquetas "<a></a>"*/
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/*Esto quita los botones que vienen por defecto en el input tipo number*/
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*Modifica el tamaño del formulario dependiendo de la cantidad de pixeles que se muestren en pantalla*/
+
+@media (max-width: 1250px){
+
+    .cuerpo{
+        width: 550px;
+        margin: auto;
+        margin-top: 75px;
+        margin-bottom: 75px;
+        box-shadow: 0 0 7px #222;
+        border-radius: 15px;
+        padding: 25px;
+        background-color: white;
+    }
+}
+
+
+@media (max-width: 800px){
+
+    .cuerpo{
+        width: 400px;
+        margin: auto;
+        margin-top: 75px;
+        margin-bottom: 75px;
+        box-shadow: 0 0 7px #222;
+        border-radius: 15px;
+        padding: 25px;
+        background-color: white;
+    }
+}
+
+
