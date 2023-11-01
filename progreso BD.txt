@@ -1,0 +1,14 @@
+Admin - procedimiento de almacenado 
+
+tecnico - procedimiento de almacenado
+
+
+Estudiante - procedimiento de almacenado
+
+
+creacion de las modalidades, contrato - pasantias- proyecto y homologacion
+
+
+contrato_Estudiante- procedimientos de almacenado y actualizacion 
+
+homologacion_Estudiante - procedimiento de almacenado y actualizacion 
