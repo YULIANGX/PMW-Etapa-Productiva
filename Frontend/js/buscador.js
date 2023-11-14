@@ -1,44 +1,40 @@
-let data = [
-    "juan",
-    "perez",
-    "luis",
-    "alonso",
-    "10258405",
-    "541254641",
-    "1254231452"
+const data = [
+    "109283746",
+    "Juan",
+    "Estevan",
+    "Raul",
+    "David",
+    "Carlos",
 ];
 
-function buscar(){
-    let query = document.getElementById("buscar").value;
+const searchInput = document.getElementById("search");
+const resultsContainer = document.getElementById("results");
 
-    console.log(query);
+searchInput.addEventListener("input", () => {
+    const searchTerm = searchInput.value.toLowerCase();
 
-    if(query.trim()=== ""){
-        return;
+    // Filtrar resultados
+    const filteredResults = data.filter(result => result.toLowerCase().includes(searchTerm));
+
+    // Mostrar u ocultar resultados según la búsqueda
+    if (searchTerm === "") {
+        resultsContainer.style.display = "none";
+    } else {
+        resultsContainer.style.display = "block";
+        displayResults(filteredResults);
     }
+});
 
-    let results = [];
+function displayResults(results) {
+    resultsContainer.innerHTML = "";
 
-    for(let i = 0; i < data.length; i++){
-        if(data[i].toLowerCase().includes(query.toLowerCase())){
-            results.push(data[i]);
-        }
-    }
-
-    document.getElementById("results").innerHTML = "";
-
-    if(results.length > 0){
-        for(let i = 0; i < results.length; i++){
-            let li=document.createElement("li");
-            li.textContent = results[i];
-            document.getElementById("results").appendChild(li);
-        }
-    }
-
-    else{
-        let li = document.createElement("li");
-        li.textContent = "no se encontraron resultados:" + query;
-        document.getElementById("result").appendChild(li);
+    if (results.length === 0) {
+        resultsContainer.innerHTML = "No se encontraron resultados.";
+    } else {
+        results.forEach(result => {
+            const resultElement = document.createElement("div");
+            resultElement.textContent = result;
+            resultsContainer.appendChild(resultElement);
+        });
     }
 }
-
